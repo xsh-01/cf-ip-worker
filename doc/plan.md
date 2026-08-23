@@ -44,7 +44,7 @@ worker-your-ip/
    - `typescript` - TypeScript compiler
    - `vitest` - Testing framework
    - `@cloudflare/workers-types` - Type definitions
-   - `@cloudflare/vitest-pool-workers` - Vitest pool for Workers
+   - `@cloudflare/vitest-plugin` - Vitest plugin for Workers
 3. Create `wrangler.jsonc` configuration
 4. Create `tsconfig.json` configuration
 5. Create `vitest.config.ts` configuration
@@ -215,11 +215,11 @@ Following TDD, we write tests before implementation.
 ```json
 {
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.8.0",
-    "@cloudflare/workers-types": "^4.20250206.0",
+    "@cloudflare/vitest-plugin": "^1.0.0",
+    "@cloudflare/workers-types": "^5.20260823.1",
     "typescript": "^5.7.3",
-    "vitest": "~3.0.0",
-    "wrangler": "^4.0.0"
+    "vitest": "^4.1.11",
+    "wrangler": "^4.125.0"
   }
 }
 ```

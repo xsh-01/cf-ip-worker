@@ -9,7 +9,7 @@ This is a Cloudflare Worker project that displays the client's IP address, geolo
 - **Runtime**: Cloudflare Workers (Edge Computing)
 - **Language**: TypeScript (ES2022, ESNext modules)
 - **Build Tool**: Wrangler v4
-- **Testing**: Vitest with `@cloudflare/vitest-pool-workers`
+- **Testing**: Vitest with `@cloudflare/vitest-plugin`
 - **UI**: Tailwind CSS (via CDN), VanillaJS
 - **License**: GPL-3.0-or-later
 
@@ -101,7 +101,7 @@ All responses include:
 
 ## Testing Guidelines
 
-Tests use `@cloudflare/vitest-pool-workers` for Workers environment simulation.
+Tests use `@cloudflare/vitest-plugin` for Workers environment simulation.
 
 ### Test Patterns
 
