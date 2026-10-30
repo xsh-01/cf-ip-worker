@@ -1,5 +1,5 @@
 {
-  "name": "worker-your-ip",
+  "name": "cf-your-ip",
   "version": "1.0.0",
   "description": "A Cloudflare Worker that displays your IP address, geolocation, and connection information",
   "type": "module",
@@ -7,8 +7,6 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
-    "test": "vitest run",
-    "test:watch": "vitest",
     "cf-typegen": "wrangler types"
   },
   "keywords": [
@@ -18,13 +16,9 @@
     "geolocation",
     "what-is-my-ip"
   ],
-  "author": "Jim Chen <Jim@ChenJ.im>",
-  "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@cloudflare/vitest-plugin": "^1.0.0",
     "@cloudflare/workers-types": "^5.20260823.1",
     "typescript": "^5.7.3",
-    "vitest": "^4.1.11",
     "wrangler": "^4.125.0"
   },
   "allowScripts": {

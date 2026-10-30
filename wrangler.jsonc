@@ -1,5 +1,5 @@
 {
-  "name": "worker-your-ip",
+  "name": "cf-your-ip",
   "main": "src/index.ts",
   "compatibility_date": "2025-12-12",
   "compatibility_flags": [],
