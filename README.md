@@ -1,10 +1,8 @@
-# Your IP - Cloudflare Worker
+# Your IP Address - Cloudflare Worker
 
-![Preview image of the application](doc/preview.png)
+A fast Cloudflare Worker that displays your IP address, geolocation, and connection infos via well-designed APIs. Perfect for checking your IP, debugging network issues, or integrating IP detection into your scripts.
 
-A fast and cool Cloudflare Worker that displays your IP address, geolocation, and connection infos via well-designed APIs. Perfect for checking your IP, debugging network issues, or integrating IP detection into your scripts.
-
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/jim60105/worker-your-ip)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/xsh-01/cf-ip-worker)
 
 ## ✨ Features
 
@@ -12,25 +10,16 @@ A fast and cool Cloudflare Worker that displays your IP address, geolocation, an
 - 📍 **Geolocation** - City, region, country, continent, and coordinates
 - 🌍 **Timezone** - Automatic timezone detection
 - 🔒 **Connection Info** - TLS version, HTTP protocol, and cipher details
-- 🏢 **Network Info** - ASN, organization, and Cloudflare data center
-- 📡 **API Endpoints** - Simple plain text and JSON APIs
-- 🎨 **Beautiful UI** - Modern, responsive design with dark mode
 - ⚡ **Fast** - Edge computing with Cloudflare's global network
 
 ## 🚀 Deploy Your Own
-
-> [!TIP]  
-> ⭐ **Star the original repository** to stay updated with new features and improvements!  
-> By starring [jim60105/worker-your-ip](https://github.com/jim60105/worker-your-ip), you'll receive notifications about updates and can easily find this project later.
-
-Click the button above to deploy your own instance, or follow the manual steps below.
 
 ### Manual Deployment
 
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/jim60105/worker-your-ip.git
+   git clone https://github.com/xsh-01/cf-ip-worker.git
    cd worker-your-ip
    ```
 
@@ -46,29 +35,6 @@ Click the button above to deploy your own instance, or follow the manual steps b
    npm run deploy
    ```
 
-## 📡 API Endpoints
-
-All endpoints return plain text unless otherwise noted.
-
-| Endpoint       | Description                                    | Example Response   |
-| -------------- | ---------------------------------------------- | ------------------ |
-| `/`            | Beautiful HTML webpage                         | HTML               |
-| `/ip`          | Your IP address (IPv4 or IPv6)                 | `203.0.113.1`      |
-| `/ipv4`        | Your IPv4 address (400 if unavailable)         | `203.0.113.1`      |
-| `/ipv6`        | Your IPv6 address (400 if unavailable)         | `2001:db8::1`      |
-| `/json`        | All information as JSON                        | `{"ip": "..."}`    |
-| `/country`     | Country code (ISO 3166-1)                      | `US`               |
-| `/city`        | City name                                      | `San Francisco`    |
-| `/region`      | Region/State name                              | `California`       |
-| `/timezone`    | Timezone                                       | `America/Los_Angeles` |
-| `/coordinates` | Latitude,Longitude                             | `37.7749,-122.4194`|
-| `/continent`   | Continent code                                 | `NA`               |
-| `/asn`         | ASN number                                     | `13335`            |
-| `/org`         | Organization/ISP name                          | `Cloudflare, Inc.` |
-| `/colo`        | Cloudflare data center code                    | `SFO`              |
-| `/tls`         | TLS version                                    | `TLSv1.3`          |
-| `/protocol`    | HTTP protocol version                          | `HTTP/2`           |
-| `/headers`     | Your request headers (JSON)                    | `{"user-agent": "..."}` |
 
 ## 💻 Usage Examples
 
@@ -94,18 +60,6 @@ curl https://your-worker.workers.dev/ipv6
 
 ```bash
 curl https://your-worker.workers.dev/json
-```
-
-### Get Country
-
-```bash
-curl https://your-worker.workers.dev/country
-```
-
-### Get Timezone
-
-```bash
-curl https://your-worker.workers.dev/timezone
 ```
 
 ### Use in Scripts
@@ -143,31 +97,6 @@ fi
    npm test
    ```
 
-## 📁 Project Structure
-
-```text
-worker-your-ip/
-├── src/
-│   ├── index.ts          # Main worker entry point
-│   ├── handlers/
-│   │   ├── api.ts        # API endpoint handlers
-│   │   └── html.ts       # HTML page generator
-│   └── utils/
-│       ├── ip.ts         # IP detection utilities
-│       └── response.ts   # Response helpers
-├── test/
-│   ├── api.test.ts       # API endpoint tests
-│   ├── ip.test.ts        # IP utility tests
-│   └── html.test.ts      # HTML page tests
-├── doc/
-│   ├── requirement.md    # Project requirements
-│   └── plan.md           # Implementation plan
-├── wrangler.jsonc        # Wrangler configuration
-├── package.json          # Project dependencies
-├── tsconfig.json         # TypeScript configuration
-├── vitest.config.ts      # Vitest configuration
-└── README.md             # This file
-```
 
 ## 📊 Available Data
 
@@ -211,21 +140,6 @@ npm run test:watch
 
 ## 📄 License
 
-<img src="https://github.com/user-attachments/assets/74aa8c66-d4ba-4ff6-9057-d11cea62d10e" alt="gplv3" width="300" />
-
-[GNU GENERAL PUBLIC LICENSE Version 3](LICENSE)
-
-Copyright (C) 2025 Jim Chen <Jim@ChenJ.im>.
-
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program. If not, see [https://www.gnu.org/licenses/](https://www.gnu.org/licenses/).
-
----
-
-> [!TIP]  
 > Understanding this license:
 >
 > - You can deploy and use this project as-is, since the webpage includes a link to this GitHub project.
