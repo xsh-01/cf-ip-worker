@@ -2,7 +2,7 @@ import {
   handleIP,
   handleIPv4,
   handleIPv6,
-  handleCountry,
+/*   handleCountry,
   handleCity,
   handleRegion,
   handleTimezone,
@@ -12,9 +12,9 @@ import {
   handleOrg,
   handleColo,
   handleTLS,
-  handleProtocol,
+  handleProtocol, */
   handleJSON,
-  handleHeaders,
+/*   handleHeaders, */
 } from "./handlers/api";
 import { generateHTML } from "./handlers/html";
 import { htmlResponse, textResponse } from "./utils/response";
@@ -42,7 +42,7 @@ export default {
         return handleIPv4(request);
       case "/ipv6":
         return handleIPv6(request);
-      case "/country":
+/*       case "/country":
         return handleCountry(request);
       case "/city":
         return handleCity(request);
@@ -63,11 +63,11 @@ export default {
       case "/tls":
         return handleTLS(request);
       case "/protocol":
-        return handleProtocol(request);
+        return handleProtocol(request); */
       case "/json":
         return handleJSON(request);
-      case "/headers":
-        return handleHeaders(request);
+/*       case "/headers":
+        return handleHeaders(request); */
       default:
         return textResponse("Not Found", 404);
     }

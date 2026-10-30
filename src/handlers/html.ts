@@ -121,7 +121,7 @@ export function generateHTML(request: Request): string {
 
       <div class="px-6 py-6 border-t border-emerald-500/10">
         <a
-          href="https://github.com/jim60105/worker-your-ip"
+          href="https://github.com"
           target="_blank"
           rel="noopener"
           class="flex items-center gap-2 text-xs text-slate-500 hover:text-slate-300 transition-colors"
@@ -152,7 +152,7 @@ export function generateHTML(request: Request): string {
           </div>
           <div class="flex-1"></div>
           <a
-            href="https://github.com/jim60105/worker-your-ip"
+            href="https://github.com"
             target="_blank"
             rel="noopener"
             class="hidden md:inline-flex items-center gap-2 rounded-xl bg-white/5 ring-1 ring-white/10 px-4 py-2 text-sm text-slate-200 hover:bg-white/10 transition-colors"
@@ -330,21 +330,9 @@ export function generateHTML(request: Request): string {
 
           <div class="grid gap-3">
             ${generateEndpointDoc(request, "/ip", "Your IP address (IPv4 or IPv6)")}
-            ${generateEndpointDoc(request, "/ipv4", "Your IPv4 address (returns 400 if unavailable)")}
-            ${generateEndpointDoc(request, "/ipv6", "Your IPv6 address (returns 400 if unavailable)")}
+            ${generateEndpointDoc(request, "/ipv4", "Your IPv4 address")}
+            ${generateEndpointDoc(request, "/ipv6", "Your IPv6 address")}
             ${generateEndpointDoc(request, "/json", "All information as JSON")}
-            ${generateEndpointDoc(request, "/country", "Your country code (ISO 3166-1)")}
-            ${generateEndpointDoc(request, "/city", "Your city name")}
-            ${generateEndpointDoc(request, "/region", "Your region/state name")}
-            ${generateEndpointDoc(request, "/timezone", "Your timezone")}
-            ${generateEndpointDoc(request, "/coordinates", "Your latitude,longitude")}
-            ${generateEndpointDoc(request, "/continent", "Your continent code")}
-            ${generateEndpointDoc(request, "/asn", "Your ASN number")}
-            ${generateEndpointDoc(request, "/org", "Your organization/ISP name")}
-            ${generateEndpointDoc(request, "/colo", "Cloudflare data center code")}
-            ${generateEndpointDoc(request, "/tls", "TLS version")}
-            ${generateEndpointDoc(request, "/protocol", "HTTP protocol version")}
-            ${generateEndpointDoc(request, "/headers", "Your request headers as JSON")}
           </div>
         </section>
 
@@ -352,7 +340,7 @@ export function generateHTML(request: Request): string {
         <footer class="my-8 pt-8 text-center text-slate-500 border-t border-emerald-500/10">
           <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-4">
             <a
-              href="https://github.com/jim60105/worker-your-ip"
+              href="https://github.com"
               target="_blank"
               rel="noopener"
               class="inline-flex items-center gap-2 text-slate-400 hover:text-slate-100 transition-colors"
@@ -363,11 +351,8 @@ export function generateHTML(request: Request): string {
               View on GitHub
             </a>
             <span class="hidden md:inline text-slate-700">•</span>
-            <span>Powered by Cloudflare Workers</span>
+            <span>Powered by Cloudflare</span>
           </div>
-          <p class="text-sm">
-            Copyright © 2025 <a href="mailto:Jim@ChenJ.im" class="text-emerald-300 hover:text-emerald-200 transition-colors">Jim Chen</a>
-          </p>
         </footer>
       </div>
     </main>
